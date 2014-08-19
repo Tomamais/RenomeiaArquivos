@@ -38,7 +38,7 @@ public class RenomeiaArquivos
 		}
 	
 		foreach(string file in Directory.GetFiles(folder)) {
-			Console.WriteLine(string.Format("Renomeando arquivo {0}",  new object[] { Path.GetFileName(file) }));
+			Console.WriteLine(string.Format("Renomeando arquivo {0}",  Path.GetFileName(file)));
 			try {
 				string finalFileName = toLower ? Path.GetFileName(file).Replace(find, replace).ToLower() : Path.GetFileName(file).Replace(find, replace);
 				string finalPath = Path.Combine(folder, finalFileName);
